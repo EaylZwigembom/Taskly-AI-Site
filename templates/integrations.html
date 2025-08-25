@@ -1,0 +1,542 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Integrations - Taskly AI
+{% endblock %}
+
+{% block main %}
+    <!-- Hero Section -->
+    <section class="integrations-hero">
+        <div class="hero-content">
+            <h1>Connect All Your Tools</h1>
+            <p>
+                Compass AI seamlessly integrates with 25+ tools your team already uses. 
+                No more context switching, no more missed updates.
+            </p>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Search integrations..." id="searchInput">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Integrations</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5 min</div>
+                <div class="stat-label">Average Setup</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">99.9%</div>
+                <div class="stat-label">Uptime</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">256-bit</div>
+                <div class="stat-label">Encryption</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="category-tabs">
+        <div class="tabs-container">
+            <div class="tab active" data-category="all">All Integrations</div>
+            <div class="tab" data-category="atlassian">Atlassian Suite</div>
+            <div class="tab" data-category="communication">Communication</div>
+            <div class="tab" data-category="productivity">Productivity</div>
+            <div class="tab" data-category="development">Development</div>
+            <div class="tab" data-category="crm">CRM & Sales</div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="integrations-container">
+            <!-- Featured Integration -->
+            <div class="featured-integration">
+                <div class="featured-content">
+                    <div class="featured-text">
+                        <h2>Deep Atlassian Integration</h2>
+                        <p>
+                            Built specifically for teams using Jira, Confluence, and the entire Atlassian suite. 
+                            Automatic ticket creation, smart documentation updates, and seamless workflow automation.
+                        </p>
+                        <a href="#atlassian" class="featured-button">Explore Atlassian Integrations</a>
+                    </div>
+                    <div class="featured-logos">
+                        <div class="featured-logo-card">
+                            <span>📋</span>
+                            <p>Jira</p>
+                        </div>
+                        <div class="featured-logo-card">
+                            <span>📝</span>
+                            <p>Confluence</p>
+                        </div>
+                        <div class="featured-logo-card">
+                            <span>🔧</span>
+                            <p>Bitbucket</p>
+                        </div>
+                        <div class="featured-logo-card">
+                            <span>📊</span>
+                            <p>Trello</p>
+                        </div>
+                        <div class="featured-logo-card">
+                            <span>🎯</span>
+                            <p>Opsgenie</p>
+                        </div>
+                        <div class="featured-logo-card">
+                            <span>🔍</span>
+                            <p>Statuspage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atlassian Suite -->
+            <div class="category-section" id="atlassian">
+                <div class="category-header">
+                    <h2 class="category-title">Atlassian Suite</h2>
+                    <p class="category-description">Complete integration with Atlassian's ecosystem</p>
+                </div>
+                <div class="integrations-grid">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #0052CC;">
+                                <span style="color: white;">📋</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Jira Software</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Automatically create, update, and manage Jira tickets from any conversation or meeting.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Auto-create tickets from Slack</li>
+                            <li>Smart status updates</li>
+                            <li>Sprint planning assistance</li>
+                            <li>Automated standup reports</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 5 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #0052CC;">
+                                <span style="color: white;">📝</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Confluence</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Keep documentation always up-to-date with automatic page creation and updates.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Meeting notes automation</li>
+                            <li>Knowledge base updates</li>
+                            <li>Decision documentation</li>
+                            <li>Project wiki management</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 5 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #0052CC;">
+                                <span style="color: white;">🔧</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Bitbucket</div>
+                                <span class="integration-status status-beta">Beta</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Link code changes to tasks and automatically update ticket status on deployments.
+                        </p>
+                        <ul class="integration-features">
+                            <li>PR to ticket linking</li>
+                            <li>Deployment notifications</li>
+                            <li>Code review reminders</li>
+                            <li>Branch management</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 10 min setup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Communication -->
+            <div class="category-section" id="communication">
+                <div class="category-header">
+                    <h2 class="category-title">Communication</h2>
+                    <p class="category-description">Turn conversations into action across all channels</p>
+                </div>
+                <div class="integrations-grid">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #4A154B;">
+                                <span style="color: white;">💬</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Slack</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Your AI teammate lives in Slack, detecting tasks and keeping everyone aligned.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Real-time task detection</li>
+                            <li>Thread summarization</li>
+                            <li>Channel analytics</li>
+                            <li>Smart notifications</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 2 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #00A4EF;">
+                                <span style="color: white;">👥</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Microsoft Teams</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Seamless integration with Teams for enterprise collaboration and task management.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Meeting transcription</li>
+                            <li>Action item tracking</li>
+                            <li>Team chat monitoring</li>
+                            <li>SharePoint sync</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 5 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #5865F2;">
+                                <span style="color: white;">🎮</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Discord</div>
+                                <span class="integration-status status-coming">Coming Soon</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Perfect for gaming studios and community-driven teams using Discord.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Server monitoring</li>
+                            <li>Community task tracking</li>
+                            <li>Voice channel summaries</li>
+                            <li>Role-based automation</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Join waitlist →</a>
+                            <span class="setup-time">⏱️ Q2 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productivity -->
+            <div class="category-section" id="productivity">
+                <div class="category-header">
+                    <h2 class="category-title">Productivity</h2>
+                    <p class="category-description">Streamline workflows across your productivity stack</p>
+                </div>
+                <div class="integrations-grid">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #000000;">
+                                <span style="color: white;">📓</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Notion</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Bi-directional sync with Notion databases, pages, and workspaces.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Database automation</li>
+                            <li>Page creation from chats</li>
+                            <li>Task sync</li>
+                            <li>Wiki updates</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 3 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #4285F4;">
+                                <span style="color: white;">📧</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Google Workspace</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Complete integration with Gmail, Calendar, Drive, and Docs.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Email task extraction</li>
+                            <li>Calendar scheduling</li>
+                            <li>Drive organization</li>
+                            <li>Meet transcription</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 5 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: linear-gradient(45deg, #F06A6A, #4ECDC4);">
+                                <span style="color: white;">✓</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Asana</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Create and manage Asana tasks automatically from any conversation.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Project management</li>
+                            <li>Timeline updates</li>
+                            <li>Team workload balancing</li>
+                            <li>Goal tracking</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 5 min setup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development -->
+            <div class="category-section" id="development">
+                <div class="category-header">
+                    <h2 class="category-title">Development</h2>
+                    <p class="category-description">Keep your dev workflow in perfect sync</p>
+                </div>
+                <div class="integrations-grid">
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #181717;">
+                                <span style="color: white;">🐙</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">GitHub</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Link issues, PRs, and deployments to your team's tasks automatically.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Issue tracking</li>
+                            <li>PR management</li>
+                            <li>Action triggers</li>
+                            <li>Release notes</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 5 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #FC6D26;">
+                                <span style="color: white;">🦊</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">GitLab</div>
+                                <span class="integration-status status-beta">Beta</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Complete DevOps lifecycle integration from planning to monitoring.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Issue boards sync</li>
+                            <li>MR automation</li>
+                            <li>CI/CD triggers</li>
+                            <li>Wiki updates</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 10 min setup</span>
+                        </div>
+                    </div>
+
+                    <div class="integration-card">
+                        <div class="integration-header">
+                            <div class="integration-logo" style="background: #5E5E5E;">
+                                <span style="color: white;">📊</span>
+                            </div>
+                            <div class="integration-info">
+                                <div class="integration-name">Linear</div>
+                                <span class="integration-status status-active">Active</span>
+                            </div>
+                        </div>
+                        <p class="integration-description">
+                            Modern issue tracking with automatic updates and smart workflows.
+                        </p>
+                        <ul class="integration-features">
+                            <li>Issue creation</li>
+                            <li>Cycle planning</li>
+                            <li>Roadmap sync</li>
+                            <li>Team velocity tracking</li>
+                        </ul>
+                        <div class="integration-footer">
+                            <a href="#" class="learn-more">Learn more →</a>
+                            <span class="setup-time">⏱️ 3 min setup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Request Integration -->
+            <div class="request-integration">
+                <h2>Don't see your tool?</h2>
+                <p>
+                    We're constantly adding new integrations. Let us know what you need and we'll prioritize it.
+                </p>
+                <a href="early-access.html" class="request-button">Request Integration</a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Tab filtering
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.category-section');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const category = tab.dataset.category;
+                
+                if (category === 'all') {
+                    sections.forEach(section => {
+                        section.style.display = 'block';
+                    });
+                } else {
+                    sections.forEach(section => {
+                        if (section.id === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        const integrationCards = document.querySelectorAll('.integration-card');
+        
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            integrationCards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show all sections when searching
+            if (searchTerm) {
+                sections.forEach(section => {
+                    section.style.display = 'block';
+                });
+                tabs.forEach(t => t.classList.remove('active'));
+                tabs[0].classList.add('active');
+            }
+        });
+        
+        // Smooth scroll to sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        entry.target.style.transition = 'all 0.6s ease';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        integrationCards.forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+{% endblock %}
