@@ -3,6 +3,25 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        .discord-icon
+        {
+            min-width: 30px;
+            min-height: 30px;
+
+            height: 85px;
+            width: 85px;
+        }
+
+         @media (max-width: 768px)
+         {
+            .discord-icon
+            {
+                height: 50px;
+                width: 50px;
+            }
+         }
+
         
         :root {
             --primary: #0052CC;
