@@ -4,21 +4,28 @@
             box-sizing: border-box;
         }
 
+        .discord-container
+        {
+            color: #5865F2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
         .discord-icon
         {
             min-width: 30px;
             min-height: 30px;
 
-            height: 85px;
-            width: 85px;
+            height: 30px;
+            width: 40px;
         }
 
          @media (max-width: 768px)
          {
             .discord-icon
             {
-                height: 50px;
-                width: 50px;
+                height: 33px;
+                width: 44px;
             }
          }
 
@@ -244,12 +251,6 @@
         
         .integration-logo {
             height: 35px;
-            opacity: 0.6;
-            transition: opacity 0.3s;
-        }
-        
-        .integration-logo:hover {
-            opacity: 1;
         }
         
         /* Features Section */
