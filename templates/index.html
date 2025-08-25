@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your AI Teammate That Never Misses a Beat</h1>
+            <p class="hero-subtitle">
+                Compass AI autonomously manages tasks across Slack, Jira, Confluence, and 20+ tools. 
+                Turn conversations into action, automate workflows, and keep your team perfectly synchronized.
+            </p>
+        </div>
+    </section>
+
+    <!-- Integration Strip -->
+    <section class="integration-strip">
+        <div class="integration-container">
+            <p class="integration-text">Seamlessly integrates with your existing tools</p>
+            <div class="integration-logos">
+                <svg class="integration-logo" viewBox="0 0 100 30" fill="#0052CC">
+                    <text x="0" y="20" font-family="Arial" font-weight="bold" font-size="18">Jira</text>
+                </svg>
+                <svg class="integration-logo" viewBox="0 0 120 30" fill="#0052CC">
+                    <text x="0" y="20" font-family="Arial" font-weight="bold" font-size="18">Confluence</text>
+                </svg>
+                <svg class="integration-logo" viewBox="0 0 100 30" fill="#4A154B">
+                    <text x="0" y="20" font-family="Arial" font-weight="bold" font-size="18">Slack</text>
+                </svg>
+                <svg class="integration-logo" viewBox="0 0 100 30" fill="#000000">
+                    <text x="0" y="20" font-family="Arial" font-weight="bold" font-size="18">Notion</text>
+                </svg>
+                <svg class="integration-logo" viewBox="0 0 100 30" fill="#4285F4">
+                    <text x="0" y="20" font-family="Arial" font-weight="bold" font-size="18">Google</text>
+                </svg>
+                <svg class="integration-logo" viewBox="0 0 100 30" fill="#00A4EF">
+                    <text x="0" y="20" font-family="Arial" font-weight="bold" font-size="18">Teams</text>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="section-header">
+            <h2>Everything Your Team Needs to Stay in Sync</h2>
+            <p class="section-subtitle">
+                Compass AI acts as a digital team member that ensures nothing falls through the cracks
+            </p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3 class="feature-title">Autonomous Task Detection</h3>
+                <p class="feature-description">
+                    Automatically identifies tasks from Slack conversations, emails, and meetings. 
+                    Creates Jira tickets and assigns them to the right team members without any manual input.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3 class="feature-title">Cross-Platform Workflow</h3>
+                <p class="feature-description">
+                    Seamlessly moves work between Jira, Confluence, Slack, and other tools. 
+                    Updates in one place automatically sync everywhere else.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3 class="feature-title">Intelligent Context Memory</h3>
+                <p class="feature-description">
+                    Remembers project context, team preferences, and past decisions. 
+                    Provides relevant information exactly when your team needs it.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">Smart Status Updates</h3>
+                <p class="feature-description">
+                    Automatically generates progress reports, standup summaries, and sprint reviews. 
+                    Keeps stakeholders informed without interrupting the team's flow.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Proactive Follow-ups</h3>
+                <p class="feature-description">
+                    Never miss a deadline or commitment. Compass tracks all promises and deadlines, 
+                    sending smart reminders before things become urgent.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔐</div>
+                <h3 class="feature-title">Enterprise Security</h3>
+                <p class="feature-description">
+                    SOC 2 compliant with end-to-end encryption. Respects existing permissions 
+                    and integrates with your SSO provider. Your data never trains AI models.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="section-header">
+            <h2>Get Started in Minutes</h2>
+            <p class="section-subtitle">No complex setup or training required</p>
+        </div>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3 class="step-title">Connect Your Tools</h3>
+                <p class="step-description">
+                    One-click OAuth integration with Jira, Confluence, Slack, and other tools
+                </p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3 class="step-title">Invite Compass</h3>
+                <p class="step-description">
+                    Add Compass to your Slack channels and Jira projects like any team member
+                </p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3 class="step-title">Work Naturally</h3>
+                <p class="step-description">
+                    Continue working as usual while Compass handles task tracking and coordination
+                </p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3 class="step-title">Save 10+ Hours/Week</h3>
+                <p class="step-description">
+                    Focus on meaningful work while Compass manages the administrative overhead
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Team's Productivity?</h2>
+            <p>Join innovative teams using Taskly AI to eliminate busywork</p>
+            <a href="/early-access" class="primary-button">Get Early Access</a>
+        </div>
+    </section>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        entry.target.style.transition = 'all 0.6s ease';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .step, .stat-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet">
+    <title>Compass AI - Your Autonomous Digital Teammate</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">T</div>
+                Taskly AI
+            </a>
+            <div class="nav-links">
+                <a href="/features">Features</a>
+                <a href="/integrations">Integrations</a>
+                <a href="/about">How it Works</a>
+                <a href="/early-access" class="cta-button">Get Early Access</a>
+            </div>
+        </div>
+    </nav>
+    <main class="container py-5 text-center">
+        {% block main %}{% endblock %}
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p style="opacity: 0.7;">
+                © 2024 Taskly AI.
+            </p>
+        </div>
+    </footer>
+</body>

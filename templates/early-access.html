@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <!-- Main Content -->
+    <main>
+        <div class="contact-container">
+            <!-- Left Column - Info -->
+            <div class="contact-info">
+                <h1>Get Early Access</h1>
+                <p>
+                    Join forward-thinking teams using Compass AI to transform their productivity. 
+                    Be among the first to experience the future of team coordination.
+                </p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🎯</div>
+                        <div class="benefit-content">
+                            <h3>Priority Onboarding</h3>
+                            <p>Get white-glove setup assistance and personalized training for your team</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">💰</div>
+                        <div class="benefit-content">
+                            <h3>Founder's Pricing</h3>
+                            <p>Lock in exclusive early-adopter pricing for life - 50% off regular rates</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🚀</div>
+                        <div class="benefit-content">
+                            <h3>Shape the Product</h3>
+                            <p>Direct access to our product team and influence over the roadmap</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🛡️</div>
+                        <div class="benefit-content">
+                            <h3>Enterprise Features</h3>
+                            <p>Get access to advanced features and integrations before general release</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column - Form -->
+            <div class="contact-form-container">
+                <div class="form-header">
+                    <h2>Request Early Access</h2>
+                    <p>Tell us about your team and we'll get you set up</p>
+                </div>
+                
+                <div class="success-message" id="successMessage">
+                    ✅ Thank you! We'll be in touch.
+                </div>
+                
+                <div class="error-message" id="errorMessage">
+                    ❌ Please fill in all required fields.
+                </div>
+                
+                <form id="earlyAccessForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Work Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="teamSize">Team Size *</label>
+                            <select id="teamSize" name="teamSize" required>
+                                <option value="">Select team size</option>
+                                <option value="1-10">1-10 people</option>
+                                <option value="11-50">11-50 people</option>
+                                <option value="51-200">51-200 people</option>
+                                <option value="201-500">201-500 people</option>
+                                <option value="500+">500+ people</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role">Your Role *</label>
+                            <select id="role" name="role" required>
+                                <option value="">Select your role</option>
+                                <option value="founder">Founder/CEO</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="product">Product</option>
+                                <option value="operations">Operations</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tools">Which tools does your team currently use? *</label>
+                        <input type="text" id="tools" name="tools" placeholder="e.g., Slack, Jira, Notion, Confluence" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="challenge">What's your biggest team coordination challenge? *</label>
+                        <textarea id="challenge" name="challenge" placeholder="Tell us about the problems you're trying to solve..." required></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" checked>
+                        <label for="newsletter">
+                            Send me product updates and tips for better team coordination (you can unsubscribe anytime)
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-button">Request Early Access</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Form submission handler
+        document.getElementById('earlyAccessForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send this to your backend
+            console.log('Form submitted:', data);
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            document.getElementById('errorMessage').style.display = 'none';
+            
+            // Reset form
+            this.reset();
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        });
+        
+        // Add floating labels effect
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+    </script>
+{% endblock %}
